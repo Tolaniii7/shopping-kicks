@@ -1,0 +1,631 @@
+@font-face {
+  font-family: Aeonik pro;
+  src: url(./images/Aeonik\ Pro\ Regular.ttf);
+}
+
+@font-face {
+  font-family: Aeonik pro;
+  src: url(./images/Aeonik\ Pro\ Black.ttf);
+}
+
+@font-face {
+  font-family: Aeonik pro;
+  src: url(./images/Aeonik\ Pro\ Bold.ttf);
+}
+
+@font-face {
+  font-family: Aeonik pro;
+  src: url(./images/Aeonik\ Pro\ Medium.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./images/static/Montserrat-Black.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/********** navbar********** */
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+}
+
+input {
+  border-radius: 15px;
+  padding: 0.3em;
+}
+
+.logo {
+  color: #141718;
+  font-size: 1.5em;
+  font-weight: 900;
+  font-family: Montserrat;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-discount {
+  background: #591d24;
+  color: #fff;
+  padding: 0.7em;
+  text-align: center;
+  font-size: 1em;
+  font-family: Aeonik pro;
+  margin-top: 1em;
+  font-weight: 500;
+  margin-bottom: 3em;
+}
+
+/********** mini-container********** */
+
+.mini-container {
+  background-image: url(./images/Frame\ 2147224279.png);
+  background-position-x: center;
+  background-size: cover;
+  margin-top: 2em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.header-one {
+  width: 480px;
+  font-size: 3em;
+  font-weight: 700;
+  font-family: Aeonik pro;
+  line-height: 1;
+  color: #fff;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.header-two {
+  width: 350px;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: Aeonik pro;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+.button-two,
+.button-one {
+  padding: 1em;
+  background-color: #141718;
+  color: #fff;
+  font-family: Aeonik pro;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 40px;
+  margin-top: 1em;
+}
+
+.button-one {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.exclusive-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+.deal-img {
+  height: 210px;
+}
+
+.deal-items {
+  width: 280px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.item-discussion > p {
+  font-weight: 400;
+  color: #707070;
+  font-size: 0.7em;
+  font-family: Aeonik pro;
+  text-align: center;
+}
+
+h2 {
+  font-family: Aeonik pro;
+  margin-top: 0.5em;
+  color: #141718;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.product-container {
+  margin-bottom: 3em;
+}
+
+h3 {
+  font-family: Aeonik pro;
+  margin-top: 1em;
+  padding: 1em;
+  color: #141718;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.product-price {
+  margin-top: 0.5em;
+  color: #ea4336;
+  font-family: Aeonik pro;
+  font: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+
+span {
+  color: #74748b;
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 500;
+}
+
+.product-brand {
+  max-width: 170px;
+  color: #141718;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: Aeonik pro;
+}
+
+.footer {
+  background-color: #141718;
+}
+
+.footer-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.footer-two {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 2em;
+  align-items: center;
+  padding: 1em;
+
+  margin: 0 auto;
+}
+
+.long-dash {
+  width: 400px;
+  margin: 0 auto;
+  border-top: 1px solid #fff;
+  padding-top: 1em;
+}
+
+.footer-two > p {
+  color: #fefefe;
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: Aeonik pro;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: #fefefe;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  font-family: Montserrat;
+}
+
+.small-dash {
+  width: 30px;
+  border-top: 2px solid #fff;
+  /* padding-top: 1em; */
+}
+
+.sub-span {
+  font-size: 0.8em;
+  font-weight: 400;
+  font-family: Aeonik pro;
+  color: #e8ecef;
+}
+
+.footer-copyright {
+  color: #e8ecef;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Aeonik pro;
+}
+
+@media only screen and (min-width: 1000px) {
+  .mini-container {
+    flex-direction: row;
+  }
+
+  .exclusive-container {
+    flex-direction: row;
+  }
+
+  .products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+  }
+
+  .footer-one {
+    flex-direction: row;
+  }
+
+  .footer-two {
+    flex-direction: row;
+    /* border-top: 1px solid #fff;
+    padding-top: 1em; */
+  }
+
+  .footer-links {
+    flex-direction: row;
+    padding: 1em;
+  }
+
+  h1 {
+    flex-direction: row;
+  }
+
+  .small-dash {
+    width: 0px;
+    border: none;
+  }
+
+  .sub-span {
+    border-left: 2px solid #fff;
+    padding-left: 1em;
+  }
+
+  .long-dash {
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+    padding-top: 1em;
+  }
+  .header-one {
+    width: 600px;
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .shopping-kicks {
+    width: 40%;
+  }
+
+  .header-two {
+    width: 500px;
+    font-size: 2em;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    font-family: Aeonik pro;
+    color: #141718;
+  }
+
+  .button-one {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+/****** checkout page *****/
+
+.cart-header {
+  font-size: 3em;
+  font-family: Aeonik pro;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.checkout-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.menu {
+  font-family: Aeonik pro;
+  font-weight: 700;
+  font-size: 1em;
+  color: #141718;
+}
+
+.menu > span {
+  width: 10%;
+  background-color: #141718;
+  padding: 0.8em;
+  border-radius: 100%;
+  margin-right: 1em;
+}
+
+.cart-dash {
+  width: 200px;
+  border-bottom: 3px solid #141718;
+  padding-bottom: 2em;
+  margin-left: 4em;
+  margin-bottom: 4em;
+}
+
+.menu-two,
+.menu-three {
+  color: #b1b5c3;
+}
+
+.menu-two > span,
+.menu-three > span {
+  background-color: #b1b5c3;
+}
+
+.cart-container {
+  width: 600px;
+
+  margin: 0 auto;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 2em;
+}
+
+.cart-features {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  /* justify-content: space-around; */
+}
+
+.cart-features > p,
+.table-header > p {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 700;
+  color: #000000;
+}
+
+.cart-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #e8ecef;
+}
+
+.quantity > p {
+  color: #121212;
+}
+
+.cart-price {
+  color: #121212;
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 400;
+}
+
+.cart-totals {
+  color: #121212;
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 700;
+}
+
+.cart-brand {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 700;
+  color: #000000;
+}
+
+.cart-color {
+  font-size: 0.7em;
+  font-family: Aeonik pro;
+  font-weight: 400;
+  color: #6c7275;
+}
+
+.cart-details {
+  padding: 1.5em;
+}
+
+.cart-button {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 500;
+  color: #6c7275;
+  border: none;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 2px solid #6c7275;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 1em;
+}
+
+.coupon {
+  margin-top: 2em;
+}
+
+.coupon-question {
+  font-size: 1.5em;
+  font-family: Aeonik pro;
+  font-weight: 500;
+  color: #141718;
+  margin-bottom: 1em;
+}
+
+.coupon-instruction {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 400;
+  color: #6c7275;
+  margin-bottom: 1em;
+}
+
+.coupon-input {
+  width: 400px;
+  padding: 1em;
+  color: #6c7275;
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.summary-container {
+  width: 500px;
+  border: 2px solid #141718;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+
+h4 {
+  font-family: Aeonik pro;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 1em;
+}
+
+.summary-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  border: 2px solid #141718;
+  padding: 1em;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.summary-option > p,
+.checkbox > p {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 500;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5em;
+}
+
+.sub-total,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.sub-total > p {
+  font-size: 1em;
+  font-family: Aeonik pro;
+  font-weight: 700;
+}
+
+.total > p {
+  font-size: 1.5em;
+  font-family: Aeonik pro;
+  font-weight: 900;
+}
+
+.checkout-button {
+  width: 400px;
+  padding: 1em;
+  background-color: #141718;
+  color: #fff;
+  font-family: Aeonik pro;
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: 1.5em;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .carting-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
