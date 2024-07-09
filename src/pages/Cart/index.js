@@ -26,7 +26,7 @@ function Cart() {
         </p>
       </div>
 
-      <div className="cart-dash"></div>
+      {/* <div className="cart-dash"></div> */}
       <div className="carting-menu">
         <ProductCart />
         <CartSumarry />

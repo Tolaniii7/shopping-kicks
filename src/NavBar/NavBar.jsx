@@ -5,7 +5,9 @@ function NavBar() {
   return (
     <>
       <div className="nav-container">
-        <p className="logo">SOLESPHERE</p>
+        <Link to="/">
+          <p className="logo">SOLESPHERE</p>
+        </Link>
 
         <div>
           <ul className="nav-links">
@@ -18,7 +20,7 @@ function NavBar() {
 
         <div style={{ display: "flex", alignItems: "center", gap: "1em" }}>
           <FaSearch />
-          <Link to="/checkout">
+          <Link to="/checkout" style={{ color: "black" }}>
             <FaCartPlus />
           </Link>
         </div>
