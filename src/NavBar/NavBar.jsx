@@ -1,7 +1,7 @@
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaCartPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function NavBar() {
-  // const element = <FontAwesomeIcon icon={faEnvelope} />;
   return (
     <>
       <div className="nav-container">
@@ -16,11 +16,11 @@ function NavBar() {
           </ul>
         </div>
 
-        <div style={{ position: "relative" }}>
-          <input type="search" />
-          <FaSearch
-            style={{ position: "absolute", top: "5px", right: "10px" }}
-          />
+        <div style={{ display: "flex", alignItems: "center", gap: "1em" }}>
+          <FaSearch />
+          <Link to="/checkout">
+            <FaCartPlus />
+          </Link>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-// import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -19,6 +19,7 @@ function Footer() {
         </div>
       </div>
       <div className="long-dash"></div>
+
       <div className="footer-two">
         <p className="footer-copyright">
           &copy; 2023 SOLESPHERE. All rights reserved
@@ -26,6 +27,12 @@ function Footer() {
 
         <p>Privacy Policy</p>
         <p>Terms of Use</p>
+
+        <div style={{ color: "#fff" }}>
+          <FaInstagram />
+          <FaFacebook />
+          <FaTwitter />
+        </div>
       </div>
     </div>
   );
