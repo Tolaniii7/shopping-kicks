@@ -198,6 +198,32 @@ h3 {
   margin-bottom: 0.7em;
 }
 
+/* .product-img {
+  position: relative;
+}
+
+.sales {
+  position: absolute;
+  top: 40;
+  bottom: 4;
+} */
+
+.product-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.green {
+  background-color: #c5ffce;
+  color: #139c10;
+  padding: 0.3em;
+  border-radius: 5px;
+  font-family: Aeonik pro;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
 span {
   color: #74748b;
   font-size: 1em;
@@ -255,7 +281,7 @@ span {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.5em;
   color: #fefefe;
 }
 
@@ -272,7 +298,7 @@ h1 {
 
 .small-dash {
   width: 30px;
-  border-top: 2px solid #fff;
+  border-top: 1px solid #fff;
   /* padding-top: 1em; */
 }
 

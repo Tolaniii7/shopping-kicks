@@ -46,13 +46,17 @@ export const latestProducts = [
     price: "# 124,000",
     brand: "NIKE",
     brandType: "jordan spizike Low",
+    id: 1,
+    discount: 0,
   },
 
   {
     photo: photo1,
-    price: "#64,000",
+    price: "# 64,000",
     brand: "NIKE",
     brandType: "Air jordan 1 Mid SE",
+    id: 2,
+    discount: 33,
   },
 
   {
@@ -60,13 +64,17 @@ export const latestProducts = [
     price: "# 124,000",
     brand: "NIKE",
     brandType: "Jordan Max Aura 6",
+    id: 3,
+    discount: 0,
   },
 
   {
     photo: photo3,
-    price: "# 164,000",
+    price: "# 64,000",
     brand: "NIKE",
     brandType: "Air Jordan 6 Retro White/Black ",
+    id: 4,
+    discount: 33,
   },
 
   {
@@ -74,6 +82,8 @@ export const latestProducts = [
     price: "# 64,000",
     brand: "NIKE",
     brandType: "Jordan Max Aura 6",
+    id: 5,
+    discount: 33,
   },
 
   {
@@ -81,6 +91,8 @@ export const latestProducts = [
     price: "# 124,000",
     brand: "NIKE",
     brandType: "Nike Air Jordan 5 Retro SE- Sail / Orewood",
+    id: 6,
+    discount: 0,
   },
 
   {
@@ -88,13 +100,17 @@ export const latestProducts = [
     price: "# 54,000",
     brand: "NIKE",
     brandType: "jordan spizike Low",
+    id: 7,
+    discount: 0,
   },
 
   {
     photo: photo7,
     price: "# 28,000",
     brand: "NIKE",
-    brandType: "Air Jordan 1 Retro High OG 'Black & White'",
+    brandType: "Air Jordan 1 Retro High OG 'Black & White' ",
+    id: 8,
+    discount: 33,
   },
 
   {
@@ -102,6 +118,8 @@ export const latestProducts = [
     price: "# 46,000",
     brand: "NIKE",
     brandType: "Air Jordan 1 Low G",
+    id: 9,
+    discount: 0,
   },
 
   {
@@ -109,6 +127,8 @@ export const latestProducts = [
     price: "# 34,000",
     brand: "NIKE",
     brandType: "Jordan Roam",
+    id: 10,
+    discount: 33,
   },
 
   {
@@ -116,6 +136,8 @@ export const latestProducts = [
     price: "# 124,000",
     brand: "NIKE",
     brandType: "Air Jordan 1 Element",
+    id: 11,
+    discount: 0,
   },
 
   {
@@ -123,6 +145,8 @@ export const latestProducts = [
     price: "# 49,000",
     brand: "NIKE",
     brandType: "Nike Air Jordan 5 Retro SE - Sail / Orewood ",
+    id: 12,
+    discount: 33,
   },
 ];
 

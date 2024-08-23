@@ -90,9 +90,19 @@ function LatestProducts() {
 function Products({ product }) {
   return (
     <li className="list">
+      {/* <div className="product-img">
+      <p className="sales">sale</p>
+      </div> */}
       <img src={product.photo} alt={product.brand} width="100%" />
-      <div className="product-details">
-        <p className="product-price">{product.price}</p>
+
+      <div>
+        <div className="product-details">
+          <p className="product-price">{product.price}</p>
+          {product.discount > 0 ? (
+            <p className="green">{product.discount}% off</p>
+          ) : null}
+        </div>
+
         <span>
           {product.brand} <br />
         </span>
