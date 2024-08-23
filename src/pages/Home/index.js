@@ -93,7 +93,12 @@ function Products({ product }) {
       {/* <div className="product-img">
       <p className="sales">sale</p>
       </div> */}
-      <img src={product.photo} alt={product.brand} width="100%" />
+      <img
+        src={product.photo}
+        alt={product.brand}
+        width="100%"
+        style={{ borderRadius: "5px" }}
+      />
 
       <div>
         <div className="product-details">
