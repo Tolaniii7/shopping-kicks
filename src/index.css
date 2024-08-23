@@ -81,8 +81,10 @@ input {
 }
 
 .info-container {
+  width: 70%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 1em;
   margin-bottom: 1em;
@@ -99,7 +101,7 @@ input {
 }
 
 .header-two {
-  width: 60%;
+  /* max-width: 70%; */
   font-size: 1em;
   font-weight: 500;
   font-family: Aeonik pro;
@@ -109,7 +111,8 @@ input {
 
 .button-two,
 .button-one {
-  width: 70%;
+  border: none;
+  width: 60%;
   padding: 1em;
   background-color: #141718;
   color: #fff;
@@ -118,10 +121,6 @@ input {
   font-weight: 700;
   border-radius: 40px;
   margin-top: 1em;
-}
-
-.button-one {
-  width: 30%;
 }
 
 .exclusive-container {
@@ -392,13 +391,9 @@ h1 {
 }
 
 .checkout-menu {
-  /* width: 800px; */
   overflow-x: scroll;
   display: flex;
   justify-content: space-around;
-  /* margin: 0 auto; */
-  /* align-items: center; */
-  gap: 1em;
   margin-top: 2em;
   margin-bottom: 3em;
 }
@@ -406,7 +401,7 @@ h1 {
 .menu {
   font-family: Aeonik pro;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 0.7em;
   color: #b1b5c3;
 }
 
@@ -417,11 +412,10 @@ h1 {
 } */
 
 .menu > span {
-  /* width: 10%; */
   background-color: #b1b5c3;
   padding: 0.6em;
   border-radius: 100%;
-  margin-right: 1em;
+  margin-right: 0.7em;
 }
 
 /* .cart-dash {
@@ -438,7 +432,7 @@ h1 {
 } */
 
 .cart-container {
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -527,16 +521,16 @@ h1 {
 .numbers {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .quantity {
   display: flex;
   align-items: center;
   border: 2px solid #6c7275;
-  padding: 5px;
+  padding: 3px;
   border-radius: 5px;
-  gap: 0.8em;
+  gap: 0.5em;
 }
 
 .coupon {
