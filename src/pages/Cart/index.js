@@ -15,13 +15,13 @@ function Cart() {
     <div>
       <h4 className="cart-header">Cart</h4>
       <div className="checkout-menu">
-        <p className="menu-one menu">
+        <p className=" menu">
           <span>1</span>Shopping Cart
         </p>
-        <p className="menu-two menu">
+        <p className=" menu">
           <span>2</span>checkout-details
         </p>
-        <p className="menu-three menu">
+        <p className=" menu">
           <span>3</span>Order Complete
         </p>
       </div>
@@ -69,7 +69,7 @@ function Carting({ product }) {
   return (
     <li className="cart-list">
       <div className="cart-item">
-        <img src={product.photo} alt={product.brandType} width="100" />
+        <img src={product.photo} alt={product.brandType} width="70" />
         <div className="cart-details">
           <p className="cart-brand">{product.brandType}</p>
           <p className="cart-color">{product.colour}</p>
@@ -77,14 +77,16 @@ function Carting({ product }) {
         </div>
       </div>
 
-      <div className="quantity">
-        <p> - </p>
-        <p> {product.quantity} </p>
-        <p> + </p>
-      </div>
+      <div className="numbers">
+        <div className="quantity">
+          <p> - </p>
+          <p> {product.quantity} </p>
+          <p> + </p>
+        </div>
 
-      <p className="cart-price">{product.price}</p>
-      <p className="cart-totals">{product.totalPrice}</p>
+        <p className="cart-price">{product.price}</p>
+        <p className="cart-totals">{product.totalPrice}</p>
+      </div>
     </li>
   );
 }
@@ -126,7 +128,10 @@ function CartSumarry() {
           <p># 620,000.00</p>
         </div>
       </div>
-      <button className="checkout-button">Checkout</button>
+      <div className="checkout-button">
+        {" "}
+        <p className="checkout">Checkout</p>
+      </div>
     </div>
   );
 }

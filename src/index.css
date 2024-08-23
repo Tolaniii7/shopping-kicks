@@ -69,11 +69,11 @@ input {
 /********** mini-container********** */
 
 .mini-container {
+  max-width: 100%;
   background-image: url(./images/Frame\ 2147224279.png);
   background-position-x: center;
   background-size: cover;
   margin-top: 2em;
-  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -83,36 +83,33 @@ input {
 .info-container {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
+  gap: 1em;
   margin-bottom: 1em;
+  padding: 1em;
 }
 
 .header-one {
-  /* max-width: 100%; */
-  /* margin: 0 auto; */
   font-size: 2em;
   font-weight: 700;
   font-family: Aeonik pro;
   line-height: 1;
   color: #fff;
   margin-top: 2em;
-  padding: 1em;
 }
 
 .header-two {
-  max-width: 60%;
-  /* margin: 0 auto; */
+  width: 60%;
   font-size: 1em;
   font-weight: 500;
   font-family: Aeonik pro;
   line-height: 30px;
   color: #fff;
-  padding: 1em;
 }
 
 .button-two,
 .button-one {
+  width: 70%;
   padding: 1em;
   background-color: #141718;
   color: #fff;
@@ -125,7 +122,6 @@ input {
 
 .button-one {
   width: 30%;
-  /* margin: 0 auto; */
 }
 
 .exclusive-container {
@@ -169,24 +165,20 @@ h2 {
   text-align: center;
 }
 
+.product-container {
+  margin-bottom: 3em;
+}
+
 .products-list {
-  max-width: 80%;
-  margin: 0 auto;
+  gap: 3em;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
+  grid-template-columns: 30% 30%;
+  place-content: center;
 }
 
 .list {
-  /* max-width: 50%; */
+  max-width: 100%;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1em;
-}
-
-.product-container {
-  margin-bottom: 3em;
 }
 
 h3 {
@@ -215,7 +207,7 @@ span {
 }
 
 .product-brand {
-  max-width: 170px;
+  max-width: 60%;
   color: #141718;
   font-size: 1em;
   font-weight: 500;
@@ -309,10 +301,11 @@ h1 {
   }
 
   .products-list {
-    max-width: 100%;
-    display: grid;
+    width: 80%;
+    gap: 5em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
+    margin: 0 auto;
   }
 
   .footer-one {
@@ -399,11 +392,12 @@ h1 {
 }
 
 .checkout-menu {
-  width: 90%;
+  /* width: 800px; */
+  overflow-x: scroll;
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
-  align-items: center;
+  /* margin: 0 auto; */
+  /* align-items: center; */
   gap: 1em;
   margin-top: 2em;
   margin-bottom: 3em;
@@ -413,18 +407,19 @@ h1 {
   font-family: Aeonik pro;
   font-weight: 700;
   font-size: 1em;
-  color: #141718;
+  color: #b1b5c3;
 }
 
-.menu-one {
+/* .menu-one {
   border-bottom: 3px solid #141718;
   padding-bottom: 2em;
-}
+  color: #141718;
+} */
 
 .menu > span {
   /* width: 10%; */
-  background-color: #141718;
-  padding: 0.8em;
+  background-color: #b1b5c3;
+  padding: 0.6em;
   border-radius: 100%;
   margin-right: 1em;
 }
@@ -437,15 +432,10 @@ h1 {
   margin-bottom: 4em;
 } */
 
-.menu-two,
-.menu-three {
-  color: #b1b5c3;
-}
-
-.menu-two > span,
+/* .menu-two > span,
 .menu-three > span {
   background-color: #b1b5c3;
-}
+} */
 
 .cart-container {
   max-width: 70%;
@@ -464,12 +454,11 @@ h1 {
   display: flex;
   align-items: center;
   gap: 3em;
-  /* justify-content: space-around; */
 }
 
 .cart-features > p,
 .table-header > p {
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Aeonik pro;
   font-weight: 700;
   color: #000000;
@@ -491,20 +480,20 @@ h1 {
 
 .cart-price {
   color: #121212;
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Aeonik pro;
   font-weight: 400;
 }
 
 .cart-totals {
   color: #121212;
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Aeonik pro;
   font-weight: 700;
 }
 
 .cart-brand {
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Aeonik pro;
   font-weight: 700;
   color: #000000;
@@ -518,11 +507,11 @@ h1 {
 }
 
 .cart-details {
-  padding: 1.5em;
+  padding: 0.5em;
 }
 
 .cart-button {
-  font-size: 1em;
+  font-size: 0.7em;
   font-family: Aeonik pro;
   font-weight: 500;
   color: #6c7275;
@@ -532,7 +521,13 @@ h1 {
 .cart-item {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  justify-content: center;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 
 .quantity {
@@ -541,7 +536,7 @@ h1 {
   border: 2px solid #6c7275;
   padding: 5px;
   border-radius: 5px;
-  gap: 1em;
+  gap: 0.8em;
 }
 
 .coupon {
@@ -565,7 +560,7 @@ h1 {
 }
 
 .coupon-input {
-  width: 400px;
+  width: 80%;
   padding: 1em;
   color: #6c7275;
   font-size: 1em;
@@ -575,12 +570,16 @@ h1 {
 }
 
 .summary-container {
-  max-width: 60%;
+  max-width: 80%;
+
   border: 2px solid #141718;
   border-radius: 10px;
   padding: 2em;
   margin: 0 auto;
   margin-bottom: 3em;
+}
+
+.summary {
 }
 
 h4 {
@@ -594,7 +593,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
+  max-width: 100%;
   border: 2px solid #141718;
   padding: 1em;
   margin: 0 auto;
@@ -620,31 +619,36 @@ h4 {
   align-items: center;
   justify-content: space-between;
   margin-top: 1em;
-  padding: 1em;
+  padding: 0.5em;
+  margin-bottom: 1em;
 }
 
 .sub-total > p {
-  font-size: 1em;
+  font-size: 0.8em;
   font-family: Aeonik pro;
   font-weight: 700;
 }
 
 .total > p {
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: Aeonik pro;
   font-weight: 900;
 }
 
 .checkout-button {
-  width: 400px;
+  width: 60%;
+  margin: 0 auto;
   padding: 1em;
   background-color: #141718;
   color: #fff;
   font-family: Aeonik pro;
   font-size: 1em;
   font-weight: 500;
-  margin-left: 1.5em;
   border-radius: 5px;
+}
+
+.checkout {
+  text-align: center;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -652,5 +656,13 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .summary-container {
+    width: 40%;
+  }
+
+  .cart-container {
+    width: 40%;
   }
 }

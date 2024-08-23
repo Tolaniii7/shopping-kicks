@@ -76,24 +76,21 @@ function LatestProducts() {
   return (
     <div className="product-container">
       <h3>Latest Products</h3>
-      <ul className="products-list">
-        {latestProducts.map((product) => (
-          <Products product={product} />
-        ))}
-      </ul>
+      <div className="product">
+        <ul className="products-list">
+          {latestProducts.map((product) => (
+            <Products product={product} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
 function Products({ product }) {
-  const style = {
-    width: "200px",
-    marginTop: "1em",
-    borderRadius: "10px",
-  };
   return (
     <li className="list">
-      <img src={product.photo} alt={product.brand} style={style} />
+      <img src={product.photo} alt={product.brand} width="100%" />
       <div className="product-details">
         <p className="product-price">{product.price}</p>
         <span>
