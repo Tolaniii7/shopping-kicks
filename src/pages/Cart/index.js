@@ -26,7 +26,6 @@ function Cart() {
         </p>
       </div>
 
-      {/* <div className="cart-dash"></div> */}
       <div className="carting-menu">
         <ProductCart />
         <CartSumarry />
@@ -69,10 +68,10 @@ function Carting({ product }) {
   return (
     <li className="cart-list">
       <div className="cart-item">
-        <img src={product.photo} alt={product.brandType} width="70" />
+        <img src={product.image} alt={product.name} width="70" />
         <div className="cart-details">
-          <p className="cart-brand">{product.brandType}</p>
-          <p className="cart-color">{product.colour}</p>
+          {/* <p className="cart-brand">{product.brandType}</p>
+          <p className="cart-color">{product.colour}</p> */}
           <p className="cart-button">X Remove</p>
         </div>
       </div>
@@ -80,7 +79,7 @@ function Carting({ product }) {
       <div className="numbers">
         <div className="quantity">
           <p> - </p>
-          <p> {product.quantity} </p>
+          <p>1</p>
           <p> + </p>
         </div>
 

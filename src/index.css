@@ -111,6 +111,7 @@ input {
 
 .button-two,
 .button-one {
+  /* margin: 0 auto; */
   border: none;
   width: 60%;
   padding: 1em;
@@ -198,20 +199,20 @@ h3 {
   margin-bottom: 0.7em;
 }
 
-/* .product-img {
-  position: relative;
-}
-
-.sales {
-  position: absolute;
-  top: 40;
-  bottom: 4;
-} */
-
 .product-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.error,
+.loading {
+  text-align: center;
+  font-family: Aeonik pro;
+  font-size: 2em;
+  font-weight: 500;
+  color: #000000;
+  font-size: 1em;
 }
 
 .green {
@@ -226,9 +227,16 @@ h3 {
 
 span {
   color: #74748b;
-  font-size: 1em;
+  font-size: 0.6em;
   font-family: Aeonik pro;
   font-weight: 500;
+}
+
+.product-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .product-brand {
@@ -331,6 +339,11 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
     margin: 0 auto;
+  }
+
+  .product-img {
+    width: 100;
+    height: 50;
   }
 
   .footer-one {
@@ -685,4 +698,53 @@ h4 {
   .cart-container {
     width: 40%;
   }
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  width: 40%;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 0.5em;
+  background-color: #141718;
+  color: #fff;
+  font-family: Aeonik pro;
+  text-align: center;
 }
