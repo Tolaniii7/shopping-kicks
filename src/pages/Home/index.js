@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import myImage from "../../images/Kalyan_Shadow_11-2 1.png";
 import { latestProducts, exclusiveItems } from "../../utils";
 import { FaSearch, FaCartPlus } from "react-icons/fa";
-// import { MdHeight } from "react-icons/md";
-// import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div>
@@ -84,8 +83,6 @@ function ProductModal({ selectedId, closeModal, product }) {
   function handleAdd() {
     handleAddProduct(selectedId);
   }
-
-  console.log(cart);
 
   return (
     <div className="modal">
@@ -213,7 +210,6 @@ function ErrorMessage({ message }) {
 
 function Products({ product, selectProduct }) {
   return (
-    // <Link>
     <li className="list" onClick={() => selectProduct(product)}>
       <img src={product.image} alt={product.name} className="product-img" />
 
@@ -229,11 +225,7 @@ function Products({ product, selectProduct }) {
           {product.name} <br />
         </span>
         <p className="product-brand">{product.type}</p>
-        {/* <button className="button-three" onClick={productView}>
-          Explore...
-        </button> */}
       </div>
     </li>
-    // </Link>
   );
 }
