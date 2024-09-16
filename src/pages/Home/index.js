@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import myImage from "../../images/Kalyan_Shadow_11-2 1.png";
-import { latestProducts, exclusiveItems } from "../../utils";
-import { FaSearch, FaCartPlus } from "react-icons/fa";
+import { exclusiveItems } from "../../utils";
+import { FaCartPlus } from "react-icons/fa";
 
 function Home() {
   return (
@@ -75,15 +75,6 @@ function Deals({ item }) {
 }
 
 function ProductModal({ selectedId, closeModal, product }) {
-  const [cart, setCarting] = useState([]);
-  function handleAddProduct(product) {
-    setCarting((cart) => [...cart, product]);
-  }
-
-  function handleAdd() {
-    handleAddProduct(selectedId);
-  }
-
   return (
     <div className="modal">
       <div className="modal-content">
@@ -114,7 +105,7 @@ function ProductModal({ selectedId, closeModal, product }) {
             <p className="product-brand">{selectedId.description}</p>{" "}
           </strong>
         </div>
-        <button className="button" onClick={handleAdd}>
+        <button className="button">
           Add to cart <FaCartPlus />
         </button>
       </div>
@@ -130,7 +121,6 @@ function LatestProducts() {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleselectedProduct(product) {
-    // setSelectedId((selectedId) => (id === selectedId ? null : id));
     setSelectedId(product);
     setIsOpen(true);
   }

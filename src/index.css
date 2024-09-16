@@ -101,7 +101,6 @@ input {
 }
 
 .header-two {
-  /* max-width: 70%; */
   font-size: 1em;
   font-weight: 500;
   font-family: Aeonik pro;
@@ -111,7 +110,6 @@ input {
 
 .button-two,
 .button-one {
-  /* margin: 0 auto; */
   border: none;
   width: 60%;
   padding: 1em;
@@ -579,9 +577,6 @@ h1 {
   padding: 2em;
   margin: 0 auto;
   margin-bottom: 3em;
-}
-
-.summary {
 }
 
 h4 {

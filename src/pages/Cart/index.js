@@ -37,7 +37,6 @@ function Cart() {
 function ProductCart() {
   return (
     <div className="cart-container">
-      {/* Table header  */}
       <div className="table-header">
         <p>Product</p>
         <div className="cart-features">
@@ -70,8 +69,6 @@ function Carting({ product }) {
       <div className="cart-item">
         <img src={product.image} alt={product.name} width="70" />
         <div className="cart-details">
-          {/* <p className="cart-brand">{product.brandType}</p>
-          <p className="cart-color">{product.colour}</p> */}
           <p className="cart-button">X Remove</p>
         </div>
       </div>
