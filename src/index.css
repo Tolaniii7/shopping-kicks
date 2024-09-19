@@ -393,9 +393,10 @@ h1 {
   }
 
   .nav-links {
+    margin-right: 6em;
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 3em;
     font-family: Aeonik pro;
     color: #141718;
   }

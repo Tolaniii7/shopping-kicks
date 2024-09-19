@@ -75,6 +75,8 @@ function Deals({ item }) {
 }
 
 function ProductModal({ selectedId, closeModal, product }) {
+  const [cart, setCart] = useState([]);
+
   return (
     <div className="modal">
       <div className="modal-content">
