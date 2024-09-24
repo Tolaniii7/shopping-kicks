@@ -32,10 +32,15 @@
 /********** navbar********** */
 
 .nav-container {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 1em;
+  z-index: 1000;
+  padding: 0.2em;
 }
 
 input {
@@ -475,6 +480,15 @@ h1 {
   border-bottom: 2px solid #e8ecef;
 }
 
+.add-cart {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+  font-size: 2em;
+  font-family: Aeonik pro;
+  font-weight: 700;
+}
+
 .quantity > p {
   color: #121212;
 }
@@ -486,7 +500,19 @@ h1 {
   font-weight: 400;
 }
 
+.cart-button {
+  border: 0;
+
+  background-color: #fff;
+}
+
+.cart-button > p {
+  font-weight: bolder;
+  font-size: 1em;
+}
+
 .cart-totals {
+  width: 3em;
   color: #121212;
   font-size: 0.7em;
   font-family: Aeonik pro;
@@ -526,18 +552,22 @@ h1 {
 }
 
 .numbers {
+  min-width: 50%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: 1.5em;
+  gap: 3em;
 }
 
 .quantity {
+  /* width: 4em; */
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 2px solid #6c7275;
-  padding: 3px;
+  padding: 0.5em;
   border-radius: 5px;
-  gap: 0.5em;
+  gap: 0.7em;
 }
 
 .coupon {

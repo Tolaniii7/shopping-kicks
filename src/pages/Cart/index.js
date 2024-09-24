@@ -1,4 +1,5 @@
-import { selectedProducts } from "../../utils";
+import { useEffect, useState } from "react";
+import useCartStore from "../../Store/Cart.js";
 
 function Checkout() {
   return (
@@ -11,6 +12,17 @@ function Checkout() {
 export default Checkout;
 
 function Cart() {
+  const store = useCartStore();
+  const cart = store.cart;
+
+  useEffect(function () {
+    document.title = "/checkout";
+
+    return function () {
+      document.title = "shopping-kicks";
+    };
+  }, []);
+
   return (
     <div>
       <h4 className="cart-header">Cart</h4>
@@ -27,14 +39,14 @@ function Cart() {
       </div>
 
       <div className="carting-menu">
-        <ProductCart />
+        <ProductCart cart={cart} />
         <CartSumarry />
       </div>
     </div>
   );
 }
 
-function ProductCart() {
+function ProductCart({ cart }) {
   return (
     <div className="cart-container">
       <div className="table-header">
@@ -47,8 +59,8 @@ function ProductCart() {
       </div>
 
       <ul>
-        {selectedProducts.map((product) => (
-          <Carting product={product} />
+        {cart.map((product) => (
+          <Carting product={product} key={product.id} />
         ))}
       </ul>
 
@@ -64,24 +76,54 @@ function ProductCart() {
 }
 
 function Carting({ product }) {
+  const [quantity, setQuantity] = useState(1);
+  function addQuantity() {
+    setQuantity(quantity + 1);
+  }
+
+  const store = useCartStore();
+
+  function handleDeleteProduct(product) {
+    store.removeCart(product);
+  }
+
+  function reduceQuantity() {
+    if (quantity > 1) setQuantity(quantity - 1);
+  }
+  const price = +product.price;
+
+  const subTotal = price * quantity;
+
   return (
     <li className="cart-list">
       <div className="cart-item">
         <img src={product.image} alt={product.name} width="70" />
         <div className="cart-details">
-          <p className="cart-button">X Remove</p>
+          <p className="cart-brand">{product.name}</p>
+          <p className="cart-brand">{product.company}</p>
+          <br />
+          <button
+            className="cart-button"
+            onClick={() => handleDeleteProduct(product)}
+          >
+            X Remove
+          </button>
         </div>
       </div>
 
       <div className="numbers">
         <div className="quantity">
-          <p> - </p>
-          <p>1</p>
-          <p> + </p>
+          <button className="cart-button" onClick={reduceQuantity}>
+            <p>-</p>
+          </button>
+          <p>{quantity}</p>
+          <button className="cart-button" onClick={addQuantity}>
+            <p>+</p>
+          </button>
         </div>
 
-        <p className="cart-price">{product.price}</p>
-        <p className="cart-totals">{product.totalPrice}</p>
+        <p className="cart-price">${product.price}</p>
+        <p className="cart-totals"> ${subTotal}.00</p>
       </div>
     </li>
   );

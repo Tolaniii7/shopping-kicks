@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import myImage from "../../images/Kalyan_Shadow_11-2 1.png";
 import { exclusiveItems } from "../../utils";
 import { FaCartPlus } from "react-icons/fa";
+import useCartStore from "../../Store/Cart.js";
 
 function Home() {
+  // const [cart, setCart] = useState([]);
+  const store = useCartStore();
+  console.log(store);
+
   return (
     <div>
       <MiniContainer />
@@ -46,7 +51,7 @@ function ExclusiveDeals() {
         <ul className="exclusive-container">
           {" "}
           {exclusiveItems.map((item) => (
-            <Deals item={item} />
+            <Deals item={item} key={item.id} />
           ))}
         </ul>
       </div>
@@ -75,7 +80,27 @@ function Deals({ item }) {
 }
 
 function ProductModal({ selectedId, closeModal, product }) {
-  const [cart, setCart] = useState([]);
+  const store = useCartStore();
+  const cart = store.cart;
+
+  function handleCarting(product) {
+    store.addToCart(product);
+    closeModal();
+  }
+
+  const isAdded = cart.map((c) => c.id).includes(selectedId.id);
+  // console.log(isAdded);
+
+  useEffect(
+    function () {
+      document.title = `shopping-kicks | ${selectedId.name}`;
+
+      return function () {
+        document.title = "shopping-kicks";
+      };
+    },
+    [selectedId]
+  );
 
   return (
     <div className="modal">
@@ -107,15 +132,19 @@ function ProductModal({ selectedId, closeModal, product }) {
             <p className="product-brand">{selectedId.description}</p>{" "}
           </strong>
         </div>
-        <button className="button">
-          Add to cart <FaCartPlus />
-        </button>
+        {!isAdded ? (
+          <button className="button" onClick={() => handleCarting(selectedId)}>
+            Add to cart <FaCartPlus />
+          </button>
+        ) : (
+          <p className="button">Added to cart</p>
+        )}
       </div>
     </div>
   );
 }
 
-function LatestProducts() {
+function LatestProducts({ cart, setCart }) {
   const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -176,7 +205,12 @@ function LatestProducts() {
         {error && <ErrorMessage message={error} />}
 
         {isOpen && (
-          <ProductModal selectedId={selectedId} closeModal={closeModal} />
+          <ProductModal
+            selectedId={selectedId}
+            closeModal={closeModal}
+            cart={cart}
+            setCart={setCart}
+          />
         )}
       </div>
     </div>
