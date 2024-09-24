@@ -9,6 +9,10 @@ function Home() {
   const store = useCartStore();
   console.log(store);
 
+  useEffect(function () {
+    document.title = "shopping-kicks | SOLESPHERE";
+  }, []);
+
   return (
     <div>
       <MiniContainer />
@@ -96,7 +100,7 @@ function ProductModal({ selectedId, closeModal, product }) {
       document.title = `shopping-kicks | ${selectedId.name}`;
 
       return function () {
-        document.title = "shopping-kicks";
+        document.title = " SOLESPHERE";
       };
     },
     [selectedId]
