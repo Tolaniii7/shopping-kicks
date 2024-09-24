@@ -48,6 +48,12 @@ input {
   padding: 0.3em;
 }
 
+.link-link {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
 .logo {
   color: #141718;
   font-size: 1.5em;

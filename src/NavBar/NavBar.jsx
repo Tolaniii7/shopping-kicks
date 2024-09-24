@@ -25,7 +25,7 @@ function NavBar() {
 
         <div style={{ display: "flex", alignItems: "center", gap: "1em" }}>
           <FaSearch />
-          <Link to="/checkout" style={{ color: "black" }}>
+          <Link to="/checkout" className="link-link">
             <FaCartPlus />
             {length > 0 ? length : null}
           </Link>

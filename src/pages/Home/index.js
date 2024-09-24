@@ -144,7 +144,7 @@ function ProductModal({ selectedId, closeModal, product }) {
   );
 }
 
-function LatestProducts({ cart, setCart }) {
+function LatestProducts() {
   const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -205,12 +205,7 @@ function LatestProducts({ cart, setCart }) {
         {error && <ErrorMessage message={error} />}
 
         {isOpen && (
-          <ProductModal
-            selectedId={selectedId}
-            closeModal={closeModal}
-            cart={cart}
-            setCart={setCart}
-          />
+          <ProductModal selectedId={selectedId} closeModal={closeModal} />
         )}
       </div>
     </div>
