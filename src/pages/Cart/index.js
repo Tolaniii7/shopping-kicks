@@ -16,10 +16,10 @@ function Cart() {
   const cart = store.cart;
 
   useEffect(function () {
-    document.title = "/checkout";
+    document.title = "checkout";
 
     return function () {
-      document.title = "shopping-kicks";
+      document.title = "SOLESPHERE";
     };
   }, []);
 
@@ -77,14 +77,15 @@ function ProductCart({ cart }) {
 
 function Carting({ product }) {
   const [quantity, setQuantity] = useState(1);
-  function addQuantity() {
+
+  function increaseQuantity() {
     setQuantity(quantity + 1);
   }
 
-  const store = useCartStore();
+  const { _, removeFromCart } = useCartStore();
 
   function handleDeleteProduct(product) {
-    store.removeCart(product);
+    removeFromCart(product);
   }
 
   function reduceQuantity() {
@@ -97,11 +98,11 @@ function Carting({ product }) {
   return (
     <li className="cart-list">
       <div className="cart-item">
-        <img src={product.image} alt={product.name} width="70" />
+        <img src={product.image} alt={product.name} width="50" />
         <div className="cart-details">
           <p className="cart-brand">{product.name}</p>
           <p className="cart-brand">{product.company}</p>
-          <br />
+          <p className="cart-brand">{product.type}</p>
           <button
             className="cart-button"
             onClick={() => handleDeleteProduct(product)}
@@ -117,13 +118,13 @@ function Carting({ product }) {
             <p>-</p>
           </button>
           <p>{quantity}</p>
-          <button className="cart-button" onClick={addQuantity}>
+          <button className="cart-button" onClick={increaseQuantity}>
             <p>+</p>
           </button>
         </div>
 
         <p className="cart-price">${product.price}</p>
-        <p className="cart-totals"> ${subTotal}.00</p>
+        <p className="cart-totals"> ${subTotal.toFixed(2)}</p>
       </div>
     </li>
   );

@@ -5,12 +5,8 @@ import { FaCartPlus } from "react-icons/fa";
 import useCartStore from "../../Store/Cart.js";
 
 function Home() {
-  // const [cart, setCart] = useState([]);
-  const store = useCartStore();
-  console.log(store);
-
   useEffect(function () {
-    document.title = "shopping-kicks | SOLESPHERE";
+    document.title = "SOLESPHERE";
   }, []);
 
   return (
@@ -84,20 +80,18 @@ function Deals({ item }) {
 }
 
 function ProductModal({ selectedId, closeModal, product }) {
-  const store = useCartStore();
-  const cart = store.cart;
+  const { cart, addToCart } = useCartStore();
+
+  const isAdded = cart.map((c) => c.id).includes(selectedId.id);
 
   function handleCarting(product) {
-    store.addToCart(product);
+    addToCart(product);
     closeModal();
   }
 
-  const isAdded = cart.map((c) => c.id).includes(selectedId.id);
-  // console.log(isAdded);
-
   useEffect(
     function () {
-      document.title = `shopping-kicks | ${selectedId.name}`;
+      document.title = `SOLESPHERE | ${selectedId.name}`;
 
       return function () {
         document.title = " SOLESPHERE";

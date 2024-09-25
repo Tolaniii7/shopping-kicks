@@ -508,8 +508,8 @@ h1 {
 
 .cart-button {
   border: 0;
-
   background-color: #fff;
+  margin-top: 1em;
 }
 
 .cart-button > p {
@@ -526,7 +526,7 @@ h1 {
 }
 
 .cart-brand {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-family: Aeonik pro;
   font-weight: 700;
   color: #000000;
@@ -549,6 +549,7 @@ h1 {
   font-weight: 500;
   color: #6c7275;
   border: none;
+  margin-bottom: 0.7em;
 }
 
 .cart-item {
@@ -558,22 +559,20 @@ h1 {
 }
 
 .numbers {
-  min-width: 50%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
 }
 
 .quantity {
-  /* width: 4em; */
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid #6c7275;
-  padding: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   border-radius: 5px;
-  gap: 0.7em;
+  gap: 1em;
 }
 
 .coupon {

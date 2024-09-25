@@ -6,7 +6,6 @@ function NavBar() {
   const store = useCartStore();
   const length = store.cart.length;
 
-  console.log(length);
   return (
     <>
       <div className="nav-container">
