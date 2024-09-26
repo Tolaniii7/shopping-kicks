@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import useCartStore from "../../Store/Cart.js";
-import { SiZebpay } from "react-icons/si";
 
 function Checkout() {
   return (
