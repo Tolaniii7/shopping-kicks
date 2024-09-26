@@ -82,10 +82,10 @@ function Carting({ product }) {
     setQuantity(quantity + 1);
   }
 
-  const { _, removeFromCart } = useCartStore();
+  const store = useCartStore();
 
   function handleDeleteProduct(product) {
-    removeFromCart(product);
+    store.removeFromCart(product);
   }
 
   function reduceQuantity() {
