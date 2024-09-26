@@ -455,11 +455,12 @@ h1 {
 }
 
 .table-header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid black;
-  padding-bottom: 2em;
+  padding: 2em;
 }
 
 .cart-features {
@@ -482,7 +483,7 @@ h1 {
   justify-content: space-between;
   margin-bottom: 1em;
   margin-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   border-bottom: 2px solid #e8ecef;
 }
 
@@ -518,7 +519,6 @@ h1 {
 }
 
 .cart-totals {
-  width: 3em;
   color: #121212;
   font-size: 0.7em;
   font-family: Aeonik pro;

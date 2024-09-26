@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useCartStore from "../../Store/Cart.js";
+import { SiZebpay } from "react-icons/si";
 
 function Checkout() {
   return (
@@ -98,11 +99,11 @@ function Carting({ product }) {
   return (
     <li className="cart-list">
       <div className="cart-item">
-        <img src={product.image} alt={product.name} width="50" />
+        <img src={product.image} alt={product.name} width="60" />
         <div className="cart-details">
-          <p className="cart-brand">{product.name}</p>
-          <p className="cart-brand">{product.company}</p>
           <p className="cart-brand">{product.type}</p>
+          <p className="cart-brand">{product.company}</p>
+
           <button
             className="cart-button"
             onClick={() => handleDeleteProduct(product)}

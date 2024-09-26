@@ -127,7 +127,7 @@ function ProductModal({ selectedId, closeModal, product }) {
           <p className="product-brand">{selectedId.gender}</p>
           <p className="product-brand">{selectedId.company}</p>
           <strong>
-            <p className="product-brand">{selectedId.description}</p>{" "}
+            <p className="product-brand">{selectedId.description}</p>
           </strong>
         </div>
         {!isAdded ? (
@@ -165,7 +165,7 @@ function LatestProducts() {
           setIsLoading(true);
           setError("");
           const res = await fetch(
-            `https://freeshoesapi-production.up.railway.app/api/v1/shoes?limit=16`
+            `https://freeshoesapi-production.up.railway.app/api/v1/shoes?limit=30`
           );
 
           if (!res.ok)
