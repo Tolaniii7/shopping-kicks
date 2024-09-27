@@ -32,15 +32,26 @@
 /********** navbar********** */
 
 .nav-container {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 1em;
+  z-index: 1000;
+  padding: 0.2em;
 }
 
 input {
   border-radius: 15px;
   padding: 0.3em;
+}
+
+.link-link {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 .logo {
@@ -393,9 +404,10 @@ h1 {
   }
 
   .nav-links {
+    margin-right: 6em;
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 3em;
     font-family: Aeonik pro;
     color: #141718;
   }
@@ -443,11 +455,12 @@ h1 {
 }
 
 .table-header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid black;
-  padding-bottom: 2em;
+  padding: 2em;
 }
 
 .cart-features {
@@ -470,8 +483,17 @@ h1 {
   justify-content: space-between;
   margin-bottom: 1em;
   margin-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   border-bottom: 2px solid #e8ecef;
+}
+
+.add-cart {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+  font-size: 2em;
+  font-family: Aeonik pro;
+  font-weight: 700;
 }
 
 .quantity > p {
@@ -485,6 +507,17 @@ h1 {
   font-weight: 400;
 }
 
+.cart-button {
+  border: 0;
+  background-color: #fff;
+  margin-top: 1em;
+}
+
+.cart-button > p {
+  font-weight: bolder;
+  font-size: 1em;
+}
+
 .cart-totals {
   color: #121212;
   font-size: 0.7em;
@@ -493,7 +526,7 @@ h1 {
 }
 
 .cart-brand {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-family: Aeonik pro;
   font-weight: 700;
   color: #000000;
@@ -516,6 +549,7 @@ h1 {
   font-weight: 500;
   color: #6c7275;
   border: none;
+  margin-bottom: 0.7em;
 }
 
 .cart-item {
@@ -527,16 +561,18 @@ h1 {
 .numbers {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 .quantity {
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 2px solid #6c7275;
-  padding: 3px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   border-radius: 5px;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .coupon {

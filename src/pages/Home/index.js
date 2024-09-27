@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import myImage from "../../images/Kalyan_Shadow_11-2 1.png";
 import { exclusiveItems } from "../../utils";
 import { FaCartPlus } from "react-icons/fa";
+import useCartStore from "../../Store/Cart.js";
 
 function Home() {
+  useEffect(function () {
+    document.title = "SOLESPHERE";
+  }, []);
+
   return (
     <div>
       <MiniContainer />
@@ -46,7 +51,7 @@ function ExclusiveDeals() {
         <ul className="exclusive-container">
           {" "}
           {exclusiveItems.map((item) => (
-            <Deals item={item} />
+            <Deals item={item} key={item.id} />
           ))}
         </ul>
       </div>
@@ -75,6 +80,26 @@ function Deals({ item }) {
 }
 
 function ProductModal({ selectedId, closeModal, product }) {
+  const { cart, addToCart } = useCartStore();
+
+  const isAdded = cart.map((c) => c.id).includes(selectedId.id);
+
+  function handleCarting(product) {
+    addToCart(product);
+    closeModal();
+  }
+
+  useEffect(
+    function () {
+      document.title = `SOLESPHERE | ${selectedId.name}`;
+
+      return function () {
+        document.title = " SOLESPHERE";
+      };
+    },
+    [selectedId]
+  );
+
   return (
     <div className="modal">
       <div className="modal-content">
@@ -102,12 +127,16 @@ function ProductModal({ selectedId, closeModal, product }) {
           <p className="product-brand">{selectedId.gender}</p>
           <p className="product-brand">{selectedId.company}</p>
           <strong>
-            <p className="product-brand">{selectedId.description}</p>{" "}
+            <p className="product-brand">{selectedId.description}</p>
           </strong>
         </div>
-        <button className="button">
-          Add to cart <FaCartPlus />
-        </button>
+        {!isAdded ? (
+          <button className="button" onClick={() => handleCarting(selectedId)}>
+            Add to cart <FaCartPlus />
+          </button>
+        ) : (
+          <p className="button">Added to cart</p>
+        )}
       </div>
     </div>
   );
@@ -136,7 +165,7 @@ function LatestProducts() {
           setIsLoading(true);
           setError("");
           const res = await fetch(
-            `https://freeshoesapi-production.up.railway.app/api/v1/shoes?limit=16`
+            `https://freeshoesapi-production.up.railway.app/api/v1/shoes?limit=30`
           );
 
           if (!res.ok)

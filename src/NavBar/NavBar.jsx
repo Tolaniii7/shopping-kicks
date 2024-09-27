@@ -1,7 +1,11 @@
 import { FaSearch, FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useCartStore from "./../Store/Cart.js";
 
 function NavBar() {
+  const store = useCartStore();
+  const length = store.cart.length;
+
   return (
     <>
       <div className="nav-container">
@@ -20,8 +24,9 @@ function NavBar() {
 
         <div style={{ display: "flex", alignItems: "center", gap: "1em" }}>
           <FaSearch />
-          <Link to="/checkout" style={{ color: "black" }}>
+          <Link to="/checkout" className="link-link">
             <FaCartPlus />
+            {length > 0 ? length : null}
           </Link>
         </div>
       </div>

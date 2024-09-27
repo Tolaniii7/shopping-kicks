@@ -3,6 +3,7 @@ import Footer from "./Footer/Footer";
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import Checkout from "./pages/Cart";
+
 const router = createBrowserRouter([
   {
     path: "/",
